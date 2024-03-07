@@ -3,7 +3,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { SettlementsComponent } from './components/settlements/settlements.component';
 
 export const routes: Routes = [
-  {path: "landingPage", component: LandingPageComponent},
+  {path: "", component: LandingPageComponent},
   {path: "settlements", component: SettlementsComponent},
 
 ];
