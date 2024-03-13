@@ -8,6 +8,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SettlementsComponent } from './pages/settlements/settlements.component';
 import { SettlementsAllComponent } from './pages/settlements-all/settlements-all.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 // export const routes: Routes = [
 export const routes: Routes = [
@@ -17,6 +18,7 @@ export const routes: Routes = [
   {path: "register", component: RegisterComponent},
   {path: "settlements", component: SettlementsComponent},
   {path: "settlements-all", component: SettlementsAllComponent},
+  {path: "admin", component: AdminComponent},
 
 ];
 

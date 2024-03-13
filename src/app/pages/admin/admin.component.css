@@ -1,0 +1,25 @@
+html {
+    background-color: #070707;
+}
+
+body {
+    background-color: #070707;
+}
+
+.admin_container {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+.admin_title {
+color: #FFF281;
+    font-family: Montserrat;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-top: 90px;
+}
