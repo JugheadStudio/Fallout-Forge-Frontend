@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule, NgIf } from '@angular/common';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RouterOutlet,
     CommonModule,
     RouterLink,
-    NgbModule
+    NgbModule,
+    NavbarComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
