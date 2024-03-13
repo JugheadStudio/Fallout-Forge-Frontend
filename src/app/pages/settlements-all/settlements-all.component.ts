@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { NavbarComponent } from '../../navbar/navbar.component';
 
 @Component({
@@ -6,7 +6,8 @@ import { NavbarComponent } from '../../navbar/navbar.component';
   standalone: true,
   imports: [NavbarComponent],
   templateUrl: './settlements-all.component.html',
-  styleUrl: './settlements-all.component.css'
+  styleUrl: './settlements-all.component.css',
+  encapsulation: ViewEncapsulation.None
 })
 export class SettlementsAllComponent {
 

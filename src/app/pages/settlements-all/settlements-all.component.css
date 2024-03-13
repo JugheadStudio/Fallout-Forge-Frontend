@@ -1,0 +1,121 @@
+html {
+    background-color: #070707;
+}
+
+body {
+    background-color: #070707;
+}
+
+.all_settlements_container {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+.select_settlement_title {
+    color: #FFF281;
+    font-family: Montserrat;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-top: 90px;
+}
+
+.headings_container {
+    margin-top: 50px;
+    color: white;
+    background-color: #000000;
+    /* width: 1800px; */
+    height: 69px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #000;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 69px;
+    text-transform: uppercase;
+}
+
+.settlement_img {
+    width: 100%;
+}
+
+.settlement_container {
+    height: 144px;
+    flex-shrink: 0;
+    /* border-radius: 10px;
+    border: 2px solid #1F1F1F; */
+    background: rgba(0, 0, 0, 0.50);
+    color: white;
+    margin-top: 18px;
+    font-family: Montserrat;
+}
+
+.settlement_name_text {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.settlement_location_text {
+    color: #616161;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.col_border_r {
+    border-right: 2px solid #1F1F1F;
+    height: 142px;
+    line-height: 142px;
+}
+
+.col_border_rr {
+    border-right: 2px solid #1F1F1F;
+    /* border-radius: 10px; */
+    height: 142px;
+    line-height: 142px;
+}
+
+.col_border_l {
+    border-radius: 10px;
+    border-left: 2px solid #1F1F1F;
+}
+
+.col_border_top_bottom {
+    border-top: 2px solid #1F1F1F;
+    border-bottom: 2px solid #1F1F1F;
+    height: 142px;
+    line-height: 142px;
+}
+
+.col_center_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.col_settlement_btn {
+    background-color: #FFF281;
+    background: #FFF281;
+    color: black;
+    width: 132px;
+    height: 142px;
+    line-height: 142px;
+    border-radius: 10px;
+    background: #FFF281;
+
+}
