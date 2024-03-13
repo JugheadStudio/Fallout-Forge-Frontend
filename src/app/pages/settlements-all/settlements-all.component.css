@@ -44,6 +44,13 @@ body {
 
 .settlement_img {
     width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.settlement_img_container {
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .settlement_container {
@@ -108,6 +115,20 @@ body {
     justify-content: center;
 }
 
+.col_center_content2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.col_center_content3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .col_settlement_btn {
     background-color: #FFF281;
     background: #FFF281;
@@ -118,4 +139,43 @@ body {
     border-radius: 10px;
     background: #FFF281;
 
+}
+
+.bottle_caps_text {
+    color: #FFF281;
+    font-family: Montserrat;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-left: 15px;
+    margin-top: 6px;
+}
+
+.capacity_text {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-left: 15px;
+    margin-top: 6px;
+}
+
+.progress {
+    width: 80%;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #616161;
+}
+
+.progress-bar {
+    background-color: #FFF281;
+}
+
+.level_text {
+    margin-top: 10px;
 }
