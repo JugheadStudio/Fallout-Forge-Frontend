@@ -3,15 +3,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-register',
   standalone: true,
   imports: [ReactiveFormsModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  templateUrl: './register.component.html',
+  styleUrl: './register.component.css',
   encapsulation: ViewEncapsulation.None
 })
 
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
   myForm!: FormGroup;
   
   constructor(private fb: FormBuilder) {}

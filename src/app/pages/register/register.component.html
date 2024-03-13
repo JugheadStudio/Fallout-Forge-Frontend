@@ -3,15 +3,15 @@
         rel="stylesheet">
 </head>
 
-<div class="login_container">
+<div class="register_container">
 
     <img src="../../../assets/logo.png" alt="" class="logo">
 
     <br>
-    <h1 class="login_text">LOGIN</h1>
+    <h1 class="register_text">Register</h1>
 
     <br>
-    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="login_form">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="register_form">
         <label for="username" class="label_text">username or Email:</label>
         <br>
         <input type="text" id="username" formControlName="username" class="input_box" />
@@ -22,12 +22,9 @@
         <input type="password" id="password" formControlName="password" class="input_box" />
         <br>
 
-        <a href="#" class="label_text_a">Forgot Password:</a>
-        <br>
-
-        <button type="submit" [disabled]="myForm.invalid" class="submit_login">Submit</button>
+        <button type="submit" [disabled]="myForm.invalid" class="submit_register">Submit</button>
     </form>
 
-    <button class="new_user">New user</button>
+    <button class="already_a_user">already a user</button>
 
 </div>
