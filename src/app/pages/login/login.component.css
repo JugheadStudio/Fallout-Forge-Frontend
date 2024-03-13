@@ -1,0 +1,24 @@
+.login_container {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 249px;
+    height: 74px;
+    flex-shrink: 0;
+    margin: auto;
+}
+
+.login_text {
+    color: #FFF281;
+    font-family: Montserrat;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: auto;
+}
