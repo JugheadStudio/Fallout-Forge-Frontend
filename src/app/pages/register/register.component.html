@@ -12,9 +12,19 @@
 
     <br>
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="register_form">
-        <label for="username" class="label_text">username or Email:</label>
+        <label for="Name" class="label_text">Name:</label>
+        <br>
+        <input type="text" id="Name" formControlName="Name" class="input_box" />
+        <br>
+
+        <label for="username" class="label_text">Username:</label>
         <br>
         <input type="text" id="username" formControlName="username" class="input_box" />
+        <br>
+
+        <label for="email" class="label_text">Email:</label>
+        <br>
+        <input type="text" id="email" formControlName="email" class="input_box" />
         <br>
 
         <label for="password" class="label_text">Password:</label>
