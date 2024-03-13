@@ -1,0 +1,100 @@
+html {
+    background-color: #070707;
+}
+
+body {
+    background-color: #070707;
+}
+
+.logo_img {
+    height: 74px;
+}
+
+.container-fluid {
+    /* color: #848484; */
+    color: white;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.nav-link H4 {
+    /* color: #848484; */
+    color: white;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+
+.active h4 {
+    /* color: #848484; */
+    color: #FFF281;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+/* center nav text */
+/* .center_nav_text {
+
+} */
+
+.user_div {
+    width: 188px;
+    height: 53px;
+    line-height: 53px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    border: 2px solid #1F1F1F;
+    display: flex;
+    align-items: center;
+}
+
+.user_img {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    margin: 5px;
+}
+
+.user_info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    margin-top: 8px;
+}
+
+.user_name {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.user_username {
+    color: #848484;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.arrow_svg {
+    margin-left: 20px;
+}
