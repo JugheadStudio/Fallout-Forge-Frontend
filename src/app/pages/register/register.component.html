@@ -1,29 +1,31 @@
-<div class="row justify-content-around pt-200">
+<div class="container">
+  <div class="row justify-content-around pt-200">
 
-  <div class="col-2 text-center">
-    <img src="../../../assets/logo.png" alt="" class="login-logo">
-
-    <h1 class="login_text heading text-primary mt-60 mb-60">REGISTER</h1>
-
-    <div class="text-start">
-      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-        <label for="registerName" class="form-label">NAME</label>
-        <input type="text" class="form-control" id="registerName" placeholder="Han Solo">
-
-        <label for="registerUsername" class="form-label mt-20">USERNAME</label>
-        <input type="text" class="form-control" id="registerUsername" placeholder="HanSolo420">
-
-        <label for="registerEmail" class="form-label mt-20">EMAIL</label>
-        <input type="email" class="form-control" id="registerEmail" placeholder="HanSolo@gmail.com">
+    <div class="col-3 text-center">
+      <img src="../../../assets/logo.png" alt="" class="login-logo">
   
-        <label for="registerPassword" class="form-label mt-20">PASSWORD</label>
-        <input type="password" class="form-control" id="registerPassword" placeholder="enter password">
-      </form>
-
-      <button type="button" class="btn btn-primary login-btn mt-30">REGISTER</button>
-      <button type="button" class="btn btn-secondary login-btn mt-20">ALREADY A USER</button>
+      <h1 class="login_text heading text-primary mt-60 mb-60">REGISTER</h1>
+  
+      <div class="text-start">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+          <label for="registerName" class="form-label">NAME</label>
+          <input type="text" class="form-control" id="registerName" placeholder="Han Solo">
+  
+          <label for="registerUsername" class="form-label mt-20">USERNAME</label>
+          <input type="text" class="form-control" id="registerUsername" placeholder="HanSolo420">
+  
+          <label for="registerEmail" class="form-label mt-20">EMAIL</label>
+          <input type="email" class="form-control" id="registerEmail" placeholder="HanSolo@gmail.com">
+    
+          <label for="registerPassword" class="form-label mt-20">PASSWORD</label>
+          <input type="password" class="form-control" id="registerPassword" placeholder="enter password">
+        </form>
+  
+        <button type="button" class="btn btn-primary login-btn mt-30">REGISTER</button>
+        <button type="button" class="btn btn-secondary login-btn mt-20">ALREADY A USER</button>
+      </div>
+  
     </div>
-
+  
   </div>
-
 </div>
