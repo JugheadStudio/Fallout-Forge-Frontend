@@ -7,7 +7,7 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
   imports: [NavbarComponent],
   templateUrl: './settlements-all.component.html',
   styleUrl: './settlements-all.component.css',
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 
 export class SettlementsAllComponent {

@@ -1,33 +1,24 @@
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-</head>
+<div class="row justify-content-around mt-60">
 
-<div class="login_container">
+  <div class="col-2 text-center">
+    <img src="../../../assets/logo.png" alt="" class="login-logo">
 
-    <img src="../../../assets/logo.png" alt="" class="logo">
+    <h1 class="login_text heading text-primary mt-60 mb-60">LOGIN</h1>
 
-    <br>
-    <h1 class="login_text">LOGIN</h1>
+    <div class="text-start">
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <label for="loginUsername" class="form-label">EMAIL OR USERNAME</label>
+        <input type="text" class="form-control" id="loginUsername" placeholder="name@example.com">
+  
+        <label for="loginPassword" class="form-label mt-20">PASSWORD</label>
+        <input type="password" class="form-control" id="loginPassword" placeholder="enter password">
+      </form>
+      <a href="" class="small-link">FORGOT PASSWORD</a>
 
-    <br>
-    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="login_form">
-        <label for="username" class="label_text">username or Email:</label>
-        <br>
-        <input type="text" id="username" formControlName="username" class="input_box" />
-        <br>
+      <button type="button" class="btn btn-primary login-btn mt-20">LOGIN</button>
+      <button type="button" class="btn btn-secondary login-btn mt-20">NEW USER</button>
+    </div>
 
-        <label for="password" class="label_text">Password:</label>
-        <br>
-        <input type="password" id="password" formControlName="password" class="input_box" />
-        <br>
-
-        <a href="#" class="label_text_a">Forgot Password:</a>
-        <br>
-
-        <button type="submit" [disabled]="myForm.invalid" class="submit_login">Login</button>
-    </form>
-
-    <button class="new_user">New user</button>
+  </div>
 
 </div>

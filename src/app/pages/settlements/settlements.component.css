@@ -1,0 +1,83 @@
+.settlement-header {
+  background-color: black;
+  border-radius: var(--fallout-radius);
+}
+
+.settlement-header p {
+  margin: 20px 0;
+}
+
+.border-right {
+  border-right: 2px solid var(--fallout-border-secondary);
+}
+
+.settlement-select-container {
+  border: 2px solid var(--fallout-border-secondary);
+  border-radius: var(--fallout-radius);
+  overflow: hidden;
+  background-color: var(--fallout-bg-fade);
+}
+
+.height-120 > div {
+  height: 120px;
+  padding: 0 30px;
+}
+
+.settlement-image {
+  overflow: hidden;
+}
+
+.settlement-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.settlement-name {
+  font-size: var(--fallout-text-lg);
+  margin: 0;
+}
+
+.location {
+  font-size: var(--fallout-text-sm);
+  color: var(--fallout-dark-grey);
+  margin: 0;
+}
+
+.bottle-caps span {
+  font-size: var(--fallout-text-lg);
+  color: var(--fallout-primary);
+  margin-left: 10px;
+}
+
+.capacity span {
+  font-size: var(--fallout-text-lg);
+  color: var(--fallout-white);
+  margin-left: 10px;
+}
+
+.progress-bar {
+  background-color: var(--fallout-dark-grey);
+  height: 7px;
+  width: 100%;
+  margin: 0 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.level-progress {
+  background-color: var(--fallout-primary);
+  height: 7px;
+  width: 50%;
+}
+
+.settlement-select-btn {
+  width: 100% !important;
+  height: 120px;
+  background-color: var(--fallout-primary);
+  border: none;
+}
+
+.settlement-select-btn:hover {
+  background-color: var(--fallout-primary-hover);
+}

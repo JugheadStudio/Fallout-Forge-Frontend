@@ -14,7 +14,7 @@ body {
 }
 
 .select_settlement_title {
-    color: #FFF281;
+    color: var(--fallout-secondary) !important;
     font-family: Montserrat;
     font-size: 35px;
     font-style: normal;

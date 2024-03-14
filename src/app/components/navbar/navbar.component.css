@@ -1,53 +1,28 @@
-html {
-    background-color: #070707;
+.fallout-nav {
+  padding: 30px 60px 0 60px;
 }
 
-body {
-    background-color: #070707;
+.nav-link {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--fallout-text-sm);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: var(--fallout-dark-grey2);
+  text-decoration: none;
+  background: none;
+  border: 0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+  text-transform: uppercase;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: var(--fallout-primary);
 }
 
 .logo_img {
-    height: 74px;
+    height: 75px;
 }
-
-.container-fluid {
-    /* color: #848484; */
-    color: white;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
-}
-
-.nav-link H4 {
-    /* color: #848484; */
-    color: white;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
-}
-
-
-.active h4 {
-    /* color: #848484; */
-    color: #FFF281;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
-}
-
-/* center nav text */
-/* .center_nav_text {
-
-} */
 
 .user_div {
     width: 188px;
@@ -93,8 +68,4 @@ body {
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
-}
-
-.arrow_svg {
-    margin-left: 20px;
 }

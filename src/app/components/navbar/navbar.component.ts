@@ -16,7 +16,7 @@ import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 
 export class NavbarComponent {
