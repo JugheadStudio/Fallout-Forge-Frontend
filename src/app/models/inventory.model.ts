@@ -1,5 +1,5 @@
 export interface Inventory {
-  constructionInventory_id?: number;
+  ccMaterials_id?: number;
   name: string;
   category: string;
   icon: string;
