@@ -26,4 +26,8 @@ export interface ConstructedConstructions {
   cc_ToStorage?: Inventory2[];
 //   cc_ToStorage?: Inventory[];
 
+    isEditing: boolean;
+    tempBuyPrice: number;
+    tempSellPrice: number;
+
 }

@@ -15,15 +15,18 @@ export class ccService {
     return this.http.get<ConstructedConstructions[]>(this.baseUrl);
   }
 
-  updateCCAmount(
-    ccMaterials_id: number,
-    newAmount: number
-  ): Observable<ConstructedConstructions> {
+  // updateCC(cc: ConstructedConstructions): Observable<ConstructedConstructions> {
+  //   return this.http.put<ConstructedConstructions>(
+  //     `${this.baseUrl}/${cc.ccMaterials_id}`,
+  //     cc
+  //   );
+  // }
+
+  saveItem(cc: ConstructedConstructions): Observable<ConstructedConstructions> {
     return this.http.put<ConstructedConstructions>(
-      `${this.baseUrl}/${ccMaterials_id}`,
-      {
-        amount: newAmount,
-      }
+      `${this.baseUrl}/${cc.ccMaterials_id}`,
+      cc
     );
   }
+
 }

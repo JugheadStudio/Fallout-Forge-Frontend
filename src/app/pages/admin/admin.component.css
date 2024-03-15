@@ -1,5 +1,5 @@
 .settlement-header {
-    background-color: black;
+    background-color: var(--fallout-bg-fade);
     border-radius: var(--fallout-radius);
 }
 

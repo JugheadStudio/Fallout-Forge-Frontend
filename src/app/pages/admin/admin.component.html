@@ -89,26 +89,48 @@
         </div>
 
         <div class="col-1 d-flex flex-column align-items-center justify-content-center text-center">
-            {{ccs.buy_price}}
+
+            <ng-container *ngIf="!ccs.isEditing; else editMode">
+                {{ccs.buy_price}}
+            </ng-container>
+            <ng-template #editMode>
+                <input type="text"
+                    class="form-control d-flex flex-column align-items-center justify-content-center text-center"
+                    [(ngModel)]="ccs.tempBuyPrice">
+            </ng-template>
+            <!-- {{ccs.buy_price}} -->
         </div>
 
         <div class="col-1 d-flex flex-column align-items-center justify-content-center text-center">
-            {{ccs.sell_price}}
+            <ng-container *ngIf="!ccs.isEditing; else editMode2">
+                {{ccs.sell_price}}
+            </ng-container>
+            <ng-template #editMode2>
+                <input type="text"
+                    class="form-control d-flex flex-column align-items-center justify-content-center text-center"
+                    [(ngModel)]="ccs.tempSellPrice">
+            </ng-template>
+            <!-- {{ccs.sell_price}} -->
         </div>
 
         <div class="col-1 d-flex flex-column align-items-center justify-content-center">
-            <button type="button" class="btn btn-primary btn-sm">EDIT</button>
+            <button type="button" class="btn btn-primary btn-sm" *ngIf="!ccs.isEditing" (click)="editItem(ccs)">
+                EDIT
+            </button>
+            <button type="button" class="btn btn-primary btn-sm" *ngIf="ccs.isEditing" (click)="saveItem(ccs)">
+                SAVE
+            </button>
         </div>
 
         <div class="col-1 d-flex flex-column align-items-center justify-content-center">
-            <button type="button" class="btn btn-secondary btn-sm">CANCEL</button>
+            <button type="button" class="btn btn-secondary btn-sm" *ngIf="ccs.isEditing" (click)="cancelEdit(ccs)">
+                CANCEL
+            </button>
         </div>
 
     </div>
 
     }
-
-
 
 
 </div>
