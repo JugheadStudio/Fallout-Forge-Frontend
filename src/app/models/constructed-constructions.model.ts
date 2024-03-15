@@ -15,6 +15,10 @@ export interface ConstructedConstructions {
 
   amount: number;
 
+  buy_price: number;
+
+  sell_price: number;
+
   capacity_used: number;
 
   constructed_ToCraftables?: Items[];
