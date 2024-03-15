@@ -1,10 +1,9 @@
 import { Inventory2 } from "./inventory2.model";
 
 export interface Settlements {
+  settlement_id?: number;
 
-      settlement_id?: number;
-
-//   userID: Users;
+  //   userID: Users;
 
   name: string;
 
@@ -19,7 +18,7 @@ export interface Settlements {
   image: string;
 
   settlements_ToStorage?: Inventory2[];
-//   settlements_ToStorage?: Inventory[];
+  //   settlements_ToStorage?: Inventory[];
 
-
+  totalCapacityUsed?: number;
 }

@@ -12,7 +12,7 @@ export class SettlementsService {
 
   private baseUrl = "http://localhost:3000/settlements";
 
-  getAllRecipes(): Observable<Settlements[]> {
+  getAllSettlements(): Observable<Settlements[]> {
     return this.http.get<Settlements[]>(this.baseUrl);
   }
 }
