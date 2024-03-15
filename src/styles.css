@@ -5,6 +5,10 @@
   --fallout-tertiary: #703A3A;
   --fallout-white: #ffffff;
 
+  --fallout-success: #86D24B;
+  --fallout-error: #D2674B;
+
+  --fallout-light-grey: #989898;
   --fallout-dark-grey: #616161;
   --fallout-dark-grey2: #848484;
   --fallout-dark-grey3: #1F1F1F;
@@ -33,6 +37,18 @@
 
 .text-primary {
   color: var(--fallout-border-primary) !important;
+}
+
+.text-dark {
+  color: var(--fallout-dark-grey) !important;
+}
+
+.text-succuess {
+  color: var(--fallout-success);
+}
+
+.text-error {
+  color: var(--fallout-error);
 }
 
 /* ======================== Buttons ======================== */
@@ -113,6 +129,14 @@
   width: 100%;
 }
 
+.secondary-btn {
+  background-color: var(--fallout-secondary);
+}
+
+.tertiary-btn {
+  background-color: var(--fallout-tertiary);
+}
+
 /* ======================== General ======================== */
 /* ========================================================= */
 
@@ -172,6 +196,10 @@ a.small-link:hover {
   font-size: var(--fallout-text-xxl);
   font-weight: 300;
   text-transform: uppercase;
+}
+
+.text-light {
+  font-weight: 300;
 }
 
 .text-xxl {
@@ -238,11 +266,27 @@ a.small-link:hover {
   margin-top: 60px;
 }
 
-.pt-200 {
-  padding-top: 200px;
+.mr-10 {
+  margin-right: 10px;
 }
 
-/* ========================= Forms ======================== */
+.ml-10 {
+  margin-left: 10px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.pt-200 {
+  padding-right: 200px;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+/* ========================= Forms ========================= */
 /* ========================================================= */
 
 .login-logo {
@@ -282,4 +326,94 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 .form-label {
   font-size: var(--fallout-text-xs);
   color: var(--fallout-dark-grey2);
+}
+
+
+/* ====================== settlements ====================== */
+/* ========================================================= */
+
+.dark-container {
+  background-color: black;
+  border-radius: var(--fallout-radius);
+}
+
+.action-success {
+  background-color: var(--fallout-success);
+  border-radius: 100px;
+  line-height: 1;
+  overflow: hidden;
+  padding: 5px 12px 5px 12px;
+  color: black;
+  font-size: var(--fallout-text-xs);
+}
+
+.action-error {
+  background-color: var(--fallout-error);
+  border-radius: 100px;
+  line-height: 1;
+  overflow: hidden;
+  padding: 5px 17px 5px 17px;
+  color: black;
+  font-size: var(--fallout-text-xs);
+}
+
+.action-primary {
+  background-color: var(--fallout-primary);
+  border-radius: 100px;
+  line-height: 1;
+  overflow: hidden;
+  padding: 5px 12px 5px 12px;
+  color: black;
+  font-size: var(--fallout-text-xs);
+}
+
+.settlement-btn {
+  height: 62px;
+}
+
+.settlement-action-container {
+  height: 168px;
+  overflow: hidden;
+}
+
+.height-208 {
+  height: 208px;
+}
+
+.primary-border {
+  padding: 10px 20px;
+  border: 1px solid var(--fallout-border-primary);
+  border-radius: var(--fallout-radius);
+}
+
+.fade-container {
+  background-color: var(--fallout-bg-fade);
+  border: 1px solid var(--fallout-dark-grey);
+  border-radius: var(--fallout-radius);
+}
+
+.black-background {
+  background-color: black;
+  border-radius: var(--fallout-radius) var(--fallout-radius) 0 0;
+}
+
+.border-right {
+  border-right: 1px solid var(--fallout-dark-grey);
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--fallout-dark-grey) !important;
+}
+
+.view-button {
+  border-radius: 10px 0 0 0;
+  font-size: var(--fallout-text-sm);
+}
+
+.contraption-row-height {
+  height: 50px;
+}
+
+.inventory-row-height {
+  height: 35px;
 }
