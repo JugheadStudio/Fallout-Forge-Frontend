@@ -270,6 +270,10 @@ a.small-link:hover {
   margin-right: 10px;
 }
 
+.mr-20 {
+  margin-right: 20px;
+}
+
 .ml-10 {
   margin-left: 10px;
 }
@@ -446,7 +450,7 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  padding: var(--bs-modal-header-padding);
+  padding: 20px 40px;
   border-bottom: none;
   border-top-left-radius: var(--fallout-radius);
   border-top-right-radius: var(--fallout-radius);
@@ -458,7 +462,7 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap) * 0.5);
+  padding: 20px 40px;
   background-color: var(--bs-modal-footer-bg);
   border-top: none;
   border-bottom-right-radius: var(--fallout-radius);
@@ -488,16 +492,17 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 20px 0;
+  padding: 0;
 }
 
 .trader-table-head {
-  border-top: 1px solid var(--fallout-primary);
-  border-bottom: 1px solid var(--fallout-primary);
+  border-top: 1px solid var(--fallout-border-tertiary);
+  border-bottom: 1px solid var(--fallout-border-tertiary);
+  background-color: var(--fallout-dark-grey3);
 }
 
 .trader-table-head-border {
-  border-right: 1px solid var(--fallout-primary);
+  border-right: 1px solid var(--fallout-border-tertiary);
 }
 
 .trader-table-body {
@@ -515,14 +520,40 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
 .trader-btn-buy {
   width: 100%;
-  height: 50px;
+  height: 100%;
   border-radius: 0px;
   background-color: var(--fallout-primary);
 }
 
 .trader-btn-sell {
   width: 100%;
-  height: 50px;
+  height: 100%;
   border-radius: 0px;
   background-color: var(--fallout-tertiary);
+}
+
+.ship-btn {
+  font-size: var(--fallout-text-md);
+  padding: 10px 50px;
+}
+
+.modal-input {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  color: var(--fallout-primary);
+}
+
+.modal-input:focus-visible {
+  outline: none;
+}
+
+.settlement-select-dropdown {
+  padding: 5px 16px;
+  border-radius: var(--fallout-radius);
+  border: 0;
+  outline: 1px solid var(--fallout-dark-grey);
+  border-right: 16px solid transparent;
+  background-color: transparent;
+  color: var(--fallout-primary);
 }
