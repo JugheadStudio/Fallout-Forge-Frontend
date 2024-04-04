@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { NavbarComponent } from "../../components/navbar/navbar.component";
 import { SettlementsService } from "../../services/settlement.service";
 import { Settlements } from "../../models/settlements.model";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-settlements",
@@ -11,7 +12,7 @@ import { Settlements } from "../../models/settlements.model";
   imports: [NavbarComponent],
 })
 export class SettlementsComponent {
-  constructor(private service: SettlementsService) {}
+  constructor(private service: SettlementsService, private router: Router) {}
 
   // Get all Settlements
   settlements: Settlements[] = [];
@@ -43,7 +44,13 @@ export class SettlementsComponent {
   // Set active settlements
   selectedSettlement?: Settlements;
 
-  setSelectedRicipe(settlement: Settlements) {
+  setSelectedSettlement(settlement: Settlements) {
     this.selectedSettlement = settlement;
+
+    console.log(this.selectedSettlement.settlement_id);
+    sessionStorage.setItem("CurrentSettlement", JSON.stringify(this.selectedSettlement.settlement_id));
+
+    // Redirect to another route after setting the selected settlement
+    this.router.navigate(["/settlement1"]);
   }
 }

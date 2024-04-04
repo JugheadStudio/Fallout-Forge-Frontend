@@ -1,12 +1,11 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Settlements } from '../models/settlements.model';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+import { Settlements } from "../models/settlements.model";
 
 @Injectable({
   providedIn: "root",
 })
-
 export class SettlementsService {
   constructor(private http: HttpClient) {}
 
