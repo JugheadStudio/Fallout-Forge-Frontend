@@ -12,15 +12,13 @@
       </button>
     </div>
 
-    <div *ngFor="let settlement of settlements; let i = index">
-      <div *ngIf="i === index">
 
         <div class="col-5">
-          <div class="dark-container p-20 height-208">
-            <h1 class="text-lg text-light">{{settlement.name}}</h1>
+          <div class="dark-container p-20 height-208" *ngIf="settlements.length > 0 && index !== undefined && index >= 0 && index < settlements.length">
+            <h1 class="text-lg text-light">{{settlements[index].name}}</h1>
             <!-- <h1 class="text-lg text-light">SETTLEMENT NAME</h1> -->
             <!-- <p class="text-xs text-dark">SETTLEMENT LOCATION</p> -->
-            <p class="text-xs text-dark">{{settlement.location}}</p>
+            <p class="text-xs text-dark">{{settlements[index].location}}</p>
 
             <div>
               <!-- <span>{{settlement.level + 1}}</span> -->
@@ -36,7 +34,7 @@
 
                 <!-- <span>{{settlement.bottleCaps}}</span> -->
                 <!-- <span class="ml-10 text-lg text-primary">20,500</span> -->
-                <span class="ml-10 text-lg text-primary">{{settlement.bottleCaps}}</span>
+                <span class="ml-10 text-lg text-primary">{{settlements[index].bottleCaps}}</span>
               </div>
 
               <div class="w-50 text-end">
@@ -48,14 +46,12 @@
 
                 <!-- <span>{{ settlement.totalCapacityUsed }} / {{settlement.level * 50}}</span> -->
                 <!-- <span class="ml-10 text-lg">300 / 500</span> -->
-                <span class="ml-10 text-lg">{{ settlement.totalCapacityUsed }} / {{settlement.level * 50}}</span>
+                <span class="ml-10 text-lg">{{ settlements[index].totalCapacityUsed }} / {{settlements[index].level * 50}}</span>
               </div>
             </div>
           </div>
         </div>
 
-      </div>
-    </div>
 
     <div class="col-4">
       <div class="dark-container p-20">
@@ -457,10 +453,11 @@
 
               <div class="w-100 d-flex">
 
+                <!-- item one -->
+
                 <div class="w-50 d-flex inventory-row-height border-bottom ">
                   <div class="text-center border-right" style="width: 15%;">
-                    <!-- <img src={{ innerArray.cc.icon }} alt="" style="width: 20px;"> -->
-                    img
+                    <img [src]="innerArray.cc.icon" alt="" style="width: 20px;">
                   </div>
 
                   <div class="text-center border-right" style="width: 60%;">
@@ -472,10 +469,11 @@
                   </div>
                 </div>
 
+                <!-- item two -->
+
                 <div class="w-50 d-flex border-bottom ">
                   <div class="text-center border-right" style="width: 15%;">
-                    <!-- <img src={{ innerArray.cc.icon }} alt="" style="width: 20px;"> -->
-                    img
+                    <img [src]="innerArray.cc.icon" alt="" style="width: 20px;">
                   </div>
 
                   <div class="text-center border-right" style="width: 60%;">
