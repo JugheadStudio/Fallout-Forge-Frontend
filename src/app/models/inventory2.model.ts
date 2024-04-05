@@ -1,8 +1,8 @@
 import { Settlements } from "./settlements.model";
+import { ConstructedConstructions } from "./constructed-constructions.model";
 
 export interface Inventory2 {
-
-      inventory_id: number;
+  inventory_id: number;
 
   amount: number;
 
@@ -10,6 +10,6 @@ export interface Inventory2 {
 
   settlements: Settlements;
 
-//   cc: Constructed_Constructions;
+  cc: ConstructedConstructions;
 
 }
