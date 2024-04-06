@@ -23,13 +23,13 @@ export class LoginComponent {
 
   login = new FormGroup({
     email: new FormControl('', Validators.required),
-    // username: new FormControl('', Validators.required),
+    username: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
   })
 
   onSubmit() {
     // Validation
-    if (this.login.value.email != "" && this.login.value.password != "" ) {
+    if ((this.login.value.email != "" || this.login.value.username !="") && this.login.value.password != "" ) {
       this.service.loginUser(this.login.value.email!, this.login.value.password!)
       .subscribe((success) => {
         // login successful, navigate to landing page

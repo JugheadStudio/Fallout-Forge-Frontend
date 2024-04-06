@@ -59,18 +59,15 @@
         <div class="user_div">
 
           @if (isLoggedIn) {
-            <div class="user_info">
-              <h4 class="user_name">Ruan</h4>
-              <h5 class="user_username">Username</h5>
-            </div>
-
-            <div class="user_info">
-              <h4 class="user_name" (click)="callLogout()">Logout</h4>
+            <div class=" d-flex user_info">
+              <h4 class="user_name m-0">{{ currentUser?.name + " " + currentUser?.surname }}</h4>
+              <h4 class="nav-logout m-0" (click)="callLogout()">Logout</h4>
             </div>
           } @else {
-            <div class="user_info">
-              <a class="user_name" routerLink="/login" routerLinkActive="active"
-              ariaCurrentWhenActive="page">Login</a>
+
+            <div class=" d-flex user_info">
+              <h4 class="nav-logout m-0" routerLink="/login" routerLinkActive="active"
+              ariaCurrentWhenActive="page">Login</h4>
             </div>
           }
         </div>

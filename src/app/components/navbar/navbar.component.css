@@ -25,14 +25,13 @@
 }
 
 .user_div {
-    width: 188px;
-    height: 53px;
     line-height: 53px;
     flex-shrink: 0;
     border-radius: 100px;
     border: 2px solid #1F1F1F;
     display: flex;
     align-items: center;
+    padding: 10px 25px;
 }
 
 .user_img {
@@ -44,10 +43,8 @@
 }
 
 .user_info {
-    display: flex;
-    flex-direction: column;
-    margin-left: 12px;
-    margin-top: 8px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .user_name {
@@ -58,6 +55,7 @@
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
+    margin-right: 20px !important;
 }
 
 .user_username {
@@ -68,4 +66,16 @@
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
+}
+
+.nav-logout {
+  font-size: var(--fallout-text-sm);
+  color: var(--fallout-dark-grey2);
+  margin: 0;
+  text-decoration: none;
+}
+
+.nav-logout:hover {
+  color: var(--fallout-primary);
+  cursor: pointer;
 }

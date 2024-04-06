@@ -21,7 +21,9 @@ import { AuthService } from '../../services/auth.service';
 })
 
 export class NavbarComponent {
-  constructor(private service: AuthService, private router: Router, private modalService: NgbModal) {
+  currentUser: any;
+
+  constructor(private service: AuthService, private authService: AuthService, private router: Router, private modalService: NgbModal) {
   }
 
   public isLoggedIn = false
@@ -30,6 +32,7 @@ export class NavbarComponent {
   ngOnInit() {
     this.checkLoginState()
     this.isAdmin = this.service.isUserAdmin()
+    this.currentUser = this.authService.getCurrentUser();
   }
   
   checkLoginState() {
