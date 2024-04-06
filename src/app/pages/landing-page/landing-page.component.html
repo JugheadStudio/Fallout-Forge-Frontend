@@ -1,27 +1,83 @@
 <app-navbar></app-navbar>
 
 <div class="container">
-  <div class="row">
-    <div class="col">
-      Landing
+  @if (isLoggedIn) {
+
+    <div class="row">
+      <div class="col text-center">
+        <h1 class="text-light">
+          Welcome back <br>
+          <span class="text-primary">{{ currentUser.name + " " + currentUser.surname}}</span>
+        </h1>
+      </div>
     </div>
-    <div class="col">
-      2
+
+    <div class="row justify-content-around">
+      <div class="text-center col-6">
+        <p class="text-grey">
+          It's time to dust off your Pip-Boy and reclaim your role as the guardian of humanity's last hope. After a brief hiatus, the wasteland beckons once more, and your settlements eagerly await your return. Are you ready to dive back into the fray, to rebuild, to strategize, and to lead your people to prosperity? The challenges may be great, but so too is your resilience. Get ready to roll up your sleeves and embark on another thrilling chapter in the saga of survival. Let's rebuild, thrive, and conquer the wasteland together!
+        </p>
+      </div>
     </div>
-    <div class="col">
-      3
+
+  } @else {
+
+    <div class="row justify-content-around">
+      <div class="col-12 text-center">
+        <h3 class="landing-welcome">Welcome to</h3>
+        <h1 class="text-primary landing-forge">Fallout Forge</h1>
+        <p class="text-dark landing-build">Build, Survive, Thrive</p>
+        <p class="mt-5 mb-5 text-grey">Step into the shoes of a post-apocalyptic overseer, tasked with the monumental responsibility of managing three settlements in a harsh and unforgiving world. In this immersive game experience inspired by the Fallout universe, you'll embark on a journey of survival, resource management, and strategic decision-making.</p>
+      </div>
     </div>
-    <div class="col">
-      4
+    
+    <div class="row mt-5">
+      <div class="col-4 landing-image settlements"></div>
+      <div class="col-8 landing-text pl-50">
+        <h5 class="text-light text-primary mb-3">Manage Three Unique Settlements</h5>
+        <p class="text-grey">Each settlement is a bastion of hope in a desolate landscape, but they're far from self-sufficient. You'll need to carefully allocate resources, oversee construction projects, and ensure the well-being of your settlers. From the bustling markets of Jamaica Plains to the rugged outposts of Abernathy Farm, every settlement presents its own challenges and opportunities.</p>
+      </div>
     </div>
-    <div class="col">
-      5
+    
+    <div class="row mt-5">
+      <div class="col-8 landing-text pr-50">
+        <h5 class="text-light text-primary mb-3">Craft, Build, and Expand</h5>
+        <p class="text-grey">Utilize the remnants of a bygone era to craft essential structures and utilities that will aid in the survival and growth of your settlements. Build farms to feed your populace, construct defenses to fend off threats, and erect trading posts to establish vital connections with other survivors. As you level up, unlock new technologies and capabilities to fortify your settlements and secure their future.</p>
+      </div>
+      <div class="col-4 landing-image craft"></div>
     </div>
-    <div class="col">
-      6
+    
+    <div class="row mt-5">
+      <div class="col-4 landing-image trade"></div>
+      <div class="col-8 landing-text pl-50">
+        <h5 class="text-light text-primary mb-3">Trade and Barter</h5>
+        <p class="text-grey">In a world where resources are scarce, mastering the art of trade is essential for survival. Engage in commerce with traders, strike lucrative deals, and stockpile valuable goods to bolster your settlements' prosperity.</p>
+      </div>
     </div>
-    <div class="col">
-      7
+    
+    <div class="row mt-5">
+      <div class="col-8 landing-text pr-50">
+        <h5 class="text-light text-primary mb-3">Strategic Shipping</h5>
+        <p class="text-grey">Connect your settlements through trade routes and supply lines, enabling the efficient exchange of resources and goods. Whether it's transporting essential supplies or reinforcing defenses, strategic shipping is the lifeline that binds your settlements together and ensures their resilience against the myriad dangers of the wasteland..</p>
+      </div>
+      <div class="col-4 landing-image shipping"></div>
     </div>
-  </div>
+    
+    <div class="row mt-5">
+      <div class="col-4 landing-image level"></div>
+      <div class="col-8 landing-text pl-50">
+        <h5 class="text-light text-primary mb-3">Level Up to Prosper</h5>
+        <p class="text-grey">As your settlements grow and prosper, so too will your influence as an overseer. Increase your level to expand your settlement capacity, allowing for greater resource storage, more advanced constructions, and enhanced defenses. Only by continually improving the safety and quality of life in your settlements can you hope to thrive in this harsh new world.</p>
+      </div>
+    </div>
+    
+    <div class="row mt-5 mb-5">
+      <div class="col-8 landing-text pr-50">
+        <h5 class="text-light text-primary mb-3">Are You Ready to Lead?</h5>
+        <p class="text-grey">The fate of humanity rests in your hands. Will you rise to the challenge and guide your settlements to a brighter tomorrow? Prepare for a journey of grit, determination, and survival unlike any other in Fallout Forge. The wasteland awaits your leadership.</p>
+      </div>
+      <div class="col-4 landing-image lead"></div>
+    </div>
+
+  }
 </div>

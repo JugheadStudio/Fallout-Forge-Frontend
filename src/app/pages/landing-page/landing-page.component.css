@@ -1,0 +1,56 @@
+.landing-image {
+  overflow: hidden;
+  height: 250px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.settlements {
+  background-image: url('../../../assets/Landing/settlements.jpeg');
+}
+
+.craft {
+  background-image: url('../../../assets/Landing/craft.jpeg');
+}
+
+.trade {
+  background-image: url('../../../assets/Landing/trade.jpeg');
+}
+
+.shipping {
+  background-image: url('../../../assets/Landing/shipping.jpeg');
+}
+
+.level {
+  background-image: url('../../../assets/Landing/level.jpeg');
+}
+
+.lead {
+  background-image: url('../../../assets/Landing/lead.jpeg');
+}
+
+.landing-text {
+  margin: auto;
+}
+
+.landing-welcome {
+  font-size: 100px;
+}
+
+.landing-forge {
+  font-size: 100px;
+  
+}
+
+.landing-build {
+  font-size: 100px;
+}
+
+.pl-50 {
+  padding-left: 50px;
+}
+
+.pr-50 {
+  padding-right: 50px;
+}

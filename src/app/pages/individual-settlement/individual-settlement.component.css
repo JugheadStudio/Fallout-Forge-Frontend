@@ -12,3 +12,13 @@
     height: 7px;
     width: 50%;
 }
+
+.settlement-img {
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.mt-35 {
+  margin-top: 35px;
+}

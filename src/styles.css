@@ -43,6 +43,10 @@
   color: var(--fallout-dark-grey) !important;
 }
 
+.text-grey {
+  color: var(--fallout-light-grey) !important;
+}
+
 .text-succuess {
   color: var(--fallout-success);
 }
@@ -203,6 +207,10 @@ a.small-link:hover {
   font-weight: 300;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .text-xxl {
   font-size: var(--fallout-text-xxl);
 }
@@ -237,6 +245,12 @@ a.small-link:hover {
 
 .font-weight-600 {
   font-weight: 600;
+}
+
+.perfect-align {
+  display: flex;
+  align-items: center; /* Vertical center alignment */
+  justify-content: space-around; /* Left alignment */
 }
 
 .mb-10 {
@@ -418,6 +432,10 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border-bottom: 1px solid var(--fallout-dark-grey) !important;
 }
 
+.border-bottom-inventory:not(:nth-last-child(-n+2)) {
+  border-bottom: 1px solid var(--fallout-dark-grey) !important;
+}
+
 .view-button {
   border-radius: 10px 0 0 0;
   font-size: var(--fallout-text-sm);
@@ -428,7 +446,7 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .inventory-row-height {
-  height: 35px;
+  height: 50px;
 }
 
 /* ---------------------- Modals ---------------------- */

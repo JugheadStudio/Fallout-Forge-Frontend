@@ -13,16 +13,16 @@
       </button>
     </div>
 
-
     <div class="col-5">
       <div class="dark-container p-20 height-208"
         *ngIf="settlements.length > 0 && currentIndex !== undefined && currentIndex >= 0 && currentIndex < settlements.length">
-        <h1 class="text-lg text-light">{{settlements[currentIndex].name}}</h1>
-        <!-- <h1 class="text-lg text-light">SETTLEMENT NAME</h1> -->
-        <!-- <p class="text-xs text-dark">SETTLEMENT LOCATION</p> -->
-        <p class="text-xs text-dark">{{settlements[currentIndex].location}}</p>
+        
+        <div>
+          <h1 class="text-lg text-light">{{settlements[currentIndex].name}}</h1>
+          <p class="text-xs text-dark">{{settlements[currentIndex].location}}</p>
+        </div>
 
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center mt-35">
           <!-- Level -->
           <div>
             <span>{{settlements[currentIndex].level}}</span>
@@ -39,7 +39,7 @@
           </div>
         </div>
 
-        <div class="d-flex">
+        <div class="d-flex mt-35">
           <div class="w-50">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 21 22" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -47,8 +47,6 @@
                 fill="#FFF281" />
             </svg>
 
-            <!-- <span>{{settlement.bottleCaps}}</span> -->
-            <!-- <span class="ml-10 text-lg text-primary">20,500</span> -->
             <span class="ml-10 text-lg text-primary">{{settlements[currentIndex].bottleCaps}}</span>
           </div>
 
@@ -59,8 +57,6 @@
                 fill="#ffffff" />
             </svg>
 
-            <!-- <span>{{ settlement.totalCapacityUsed }} / {{settlement.level * 50}}</span> -->
-            <!-- <span class="ml-10 text-lg">300 / 500</span> -->
             <span class="ml-10 text-lg">{{ settlements[currentIndex].totalCapacityUsed }} /
               {{settlements[currentIndex].level *
               50}}</span>
@@ -71,121 +67,9 @@
 
 
     <div class="col-4">
-      <div class="dark-container p-20">
-
-        <div class="settlement-action-container">
-          <!-- one line on the timeline thing ------------ -->
-          <div class="row mb-1">
-            <div class="col-6">
-              <span class="text-sm text-dark">PURIFIED WATER</span>
-            </div>
-
-            <div class="col-2">
-              <span class="text-sm text-dark">100</span>
-            </div>
-
-            <div class="col-2">
-              <span class="action-success">SOLD</span>
-            </div>
-
-            <div class="col-2 text-end">
-              <span class="text-sm text-success">+100</span>
-            </div>
-          </div>
-          <!-- end ------------------------------------ -->
-
-          <div class="row mb-1">
-            <div class="col-6">
-              <span class="text-sm text-dark">PURIFIED WATER</span>
-            </div>
-
-            <div class="col-2">
-              <span class="text-sm text-dark">100</span>
-            </div>
-
-            <div class="col-2">
-              <span class="action-error">BUY</span>
-            </div>
-
-            <div class="col-2 text-end">
-              <span class="text-sm text-error">-100</span>
-            </div>
-          </div>
-
-          <div class="row mb-1">
-            <div class="col-6">
-              <span class="text-sm text-dark">PURIFIED WATER</span>
-            </div>
-
-            <div class="col-2">
-              <span class="text-sm text-dark">100</span>
-            </div>
-
-            <div class="col-2">
-              <span class="action-success">SOLD</span>
-            </div>
-
-            <div class="col-2 text-end">
-              <span class="text-sm text-success">+100</span>
-            </div>
-          </div>
-
-          <div class="row mb-1">
-            <div class="col-6">
-              <span class="text-sm text-dark">PURIFIED WATER</span>
-            </div>
-
-            <div class="col-2">
-              <span class="text-sm text-dark">100</span>
-            </div>
-
-            <div class="col-2">
-              <span class="action-primary">YIELD</span>
-            </div>
-
-            <div class="col-2 text-end">
-              <span class="text-sm text-primary">-</span>
-            </div>
-          </div>
-
-
-          <div class="row mb-1">
-            <div class="col-6">
-              <span class="text-sm text-dark">PURIFIED WATER</span>
-            </div>
-
-            <div class="col-2">
-              <span class="text-sm text-dark">100</span>
-            </div>
-
-            <div class="col-2">
-              <span class="action-success">SOLD</span>
-            </div>
-
-            <div class="col-2 text-end">
-              <span class="text-sm text-success">+100</span>
-            </div>
-          </div>
-
-          <div class="row mb-1">
-            <div class="col-6">
-              <span class="text-sm text-dark">PURIFIED WATER</span>
-            </div>
-
-            <div class="col-2">
-              <span class="text-sm text-dark">100</span>
-            </div>
-
-            <div class="col-2">
-              <span class="action-success">SOLD</span>
-            </div>
-
-            <div class="col-2 text-end">
-              <span class="text-sm text-success">+100</span>
-            </div>
-          </div>
-        </div>
-
+      <div class="dark-container p-20 height-208 settlement-img" [ngStyle]="{'background-image': 'url(' + settlements[currentIndex].image + ')'}"
+      *ngIf="settlements.length > 0 && currentIndex !== undefined && currentIndex >= 0 && currentIndex < settlements.length">
+        
       </div>
     </div>
 
@@ -428,49 +312,29 @@
 
         </div>
 
-        <!-- single inventory row w/ 2 items ------------------------------------ -->
-        <div class="w-100 d-flex">
-
-          <div class="w-50 d-flex inventory-row-height border-bottom ">
-            <div class="text-center border-right" style="width: 15%;">
-              <!-- <img src="" alt=""> -->
-              img
-            </div>
-
-            <div class="text-center border-right" style="width: 60%;">
-              <span class="text-sm text-dark">WATER PURIFIER</span>
-            </div>
-
-            <div class="text-center border-right" style="width: 35%;">
-              <span class="text-sm">300</span>
-            </div>
-          </div>
-
-          <div class="w-50 d-flex border-bottom ">
-            <div class="text-center border-right" style="width: 15%;">
-              <!-- <img src="" alt=""> -->
-              img
-            </div>
-
-            <div class="text-center border-right" style="width: 60%;">
-              <span class="text-sm text-dark">WATER PURIFIER</span>
-            </div>
-
-            <div class="text-center border-right" style="width: 35%;">
-              <span class="text-sm">300</span>
-            </div>
-          </div>
-
-        </div>
-        <!-- single inventory row w/ 2 items ------------------------------------ -->
         <div *ngFor="let settlement of settlements; let i = index">
+          <div class="w-100 d-flex flex-wrap" *ngIf="i === currentIndex">
+            <div class="w-50 d-flex inventory-row-height border-bottom-inventory" *ngFor="let innerArray of settlement.settlements_ToStorage">
+              <div class="text-center border-right perfect-align" style="width: 15%;">
+                <img [src]="innerArray.cc.icon" alt="" style="width: 25px;">
+              </div>
+              <div class="text-center border-right perfect-align" style="width: 60%;">
+                <span class="text-sm text-grey">{{ innerArray.cc.name }}</span>
+              </div>
+              <div class="text-center border-right perfect-align" style="width: 35%;">
+                <span class="text-sm">{{ innerArray.amount }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- <div *ngFor="let settlement of settlements; let i = index">
           <div *ngIf="i === currentIndex">
 
             <div *ngFor="let innerArray of settlement.settlements_ToStorage">
 
               <div class="w-100 d-flex">
 
-                <!-- item one -->
 
                 <div class="w-50 d-flex inventory-row-height border-bottom ">
                   <div class="text-center border-right" style="width: 15%;">
@@ -478,7 +342,7 @@
                   </div>
 
                   <div class="text-center border-right" style="width: 60%;">
-                    <span class="text-sm text-dark">{{ innerArray.cc.name }}</span>
+                    <span class="text-sm text-grey">{{ innerArray.cc.name }}</span>
                   </div>
 
                   <div class="text-center border-right" style="width: 35%;">
@@ -486,7 +350,6 @@
                   </div>
                 </div>
 
-                <!-- item two -->
 
                 <div class="w-50 d-flex border-bottom ">
                   <div class="text-center border-right" style="width: 15%;">
@@ -494,7 +357,7 @@
                   </div>
 
                   <div class="text-center border-right" style="width: 60%;">
-                    <span class="text-sm text-dark">{{ innerArray.cc.name }}</span>
+                    <span class="text-sm text-grey">{{ innerArray.cc.name }}</span>
                   </div>
 
                   <div class="text-center border-right" style="width: 35%;">
@@ -507,7 +370,7 @@
             </div>
 
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>
