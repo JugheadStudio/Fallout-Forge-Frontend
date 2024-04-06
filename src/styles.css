@@ -257,6 +257,12 @@ a.small-link:hover {
   justify-content: space-around; /* Left alignment */
 }
 
+.perfect-align2 {
+  display: flex;
+  align-items: center; /* Vertical center alignment */
+  justify-content: space-around; /* Left alignment */
+}
+
 .mb-10 {
   margin-bottom: 10px;
 }
