@@ -1,13 +1,15 @@
+<app-navbar></app-navbar>
+
 <div class="container">
   <div class="row justify-content-around pt-200">
 
     <div class="col-3 text-center">
-      <img src="../../../assets/logo.png" alt="" class="login-logo">
+      <!-- <img src="../../../assets/logo.png" alt="" class="login-logo"> -->
   
       <h1 class="login_text heading text-primary mt-60 mb-60">REGISTER</h1>
   
       <div class="text-start">
-        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="register" (ngSubmit)="onSubmit()">
           <label for="registerName" class="form-label">NAME</label>
           <input type="text" class="form-control" id="registerName" placeholder="Han Solo">
   
@@ -19,10 +21,12 @@
     
           <label for="registerPassword" class="form-label mt-20">PASSWORD</label>
           <input type="password" class="form-control" id="registerPassword" placeholder="enter password">
+
+          <button type="submit" class="btn btn-primary login-btn mt-30">REGISTER</button>
+          <button type="button" class="btn btn-secondary login-btn mt-20" routerLink="/login" routerLinkActive="active"
+          ariaCurrentWhenActive="page">ALREADY A USER</button>
         </form>
   
-        <button type="button" class="btn btn-primary login-btn mt-30">REGISTER</button>
-        <button type="button" class="btn btn-secondary login-btn mt-20">ALREADY A USER</button>
       </div>
   
     </div>

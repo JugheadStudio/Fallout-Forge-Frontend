@@ -13,40 +13,66 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav">
 
-                <li class="nav-item">
+                @if (isLoggedIn) {
+                  <li class="nav-item">
                     <a class="nav-link active" routerLink="/" routerLinkActive="active"
                         ariaCurrentWhenActive="page">Home</a>
-                </li>
+                  </li>
 
-                <li class="nav-item">
+                  <li class="nav-item">
                     <a class="nav-link" routerLink="/settlements" routerLinkActive="active"
                         ariaCurrentWhenActive="page">Settlements</a>
-                </li>
+                  </li>
 
-                <li class="nav-item">
+                  @if(isAdmin) {
+                    <li class="nav-item">
+                      <a class="nav-link" routerLink="/admin" routerLinkActive="active"
+                          ariaCurrentWhenActive="page">Admin</a>
+                    </li>
+                  }
+
+                  <!-- <button (click)="callLogout()">Logout</button> -->
+
+                } @else {
+                  <li class="nav-item">
+                    <a class="nav-link active" routerLink="/" routerLinkActive="active"
+                        ariaCurrentWhenActive="page">Home</a>
+                  </li>
+
+                  <!-- <li class="nav-item">
                     <a class="nav-link" routerLink="/login" routerLinkActive="active"
                         ariaCurrentWhenActive="page">Login</a>
-                </li>
-
-                <li class="nav-item">
+                  </li>
+                  
+                  <li class="nav-item">
                     <a class="nav-link" routerLink="/register" routerLinkActive="active"
                         ariaCurrentWhenActive="page">Register</a>
-                </li>
+                  </li> -->
 
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin" routerLinkActive="active"
-                        ariaCurrentWhenActive="page">Admin</a>
-                </li>
+                  <!-- <button (click)="callLogout()">Logout</button> -->
+
+                }
 
             </ul>
         </div>
 
         <div class="user_div">
-            <img src="../../assets/user.png" alt="" class="user_img">
+
+          @if (isLoggedIn) {
             <div class="user_info">
-                <h4 class="user_name">Ruan</h4>
-                <h5 class="user_username">Username</h5>
+              <h4 class="user_name">Ruan</h4>
+              <h5 class="user_username">Username</h5>
             </div>
+
+            <div class="user_info">
+              <h4 class="user_name" (click)="callLogout()">Logout</h4>
+            </div>
+          } @else {
+            <div class="user_info">
+              <a class="user_name" routerLink="/login" routerLinkActive="active"
+              ariaCurrentWhenActive="page">Login</a>
+            </div>
+          }
         </div>
 
     </div>

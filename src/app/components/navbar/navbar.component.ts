@@ -1,7 +1,8 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule, NgIf } from '@angular/common';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AuthService } from '../../services/auth.service';
 // import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({
@@ -20,7 +21,27 @@ import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class NavbarComponent {
-  constructor(private modalService: NgbModal) {
+  constructor(private service: AuthService, private router: Router, private modalService: NgbModal) {
+  }
+
+  public isLoggedIn = false
+  public isAdmin = false
+
+  ngOnInit() {
+    this.checkLoginState()
+    this.isAdmin = this.service.isUserAdmin()
+  }
+  
+  checkLoginState() {
+    this.service.checkIfLoggedIn().subscribe((loggedIn) => {
+      this.isLoggedIn = loggedIn
+    })
+  }
+
+
+  callLogout() {
+    this.service.Logout()
+    this.router.navigateByUrl("/login")
   }
 
   public open(modal: any): void {
