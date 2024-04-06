@@ -25,4 +25,5 @@ export class SettlementsService {
     craftConstruction(settlementId: number, constructionId: number): Observable<any> {
     return this.http.post<any>(`${this.constrcutionsUrl}/${settlementId}/craft`, { constructionId });
   }
+  
 }
