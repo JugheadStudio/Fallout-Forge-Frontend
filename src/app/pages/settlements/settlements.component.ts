@@ -23,7 +23,7 @@ export class SettlementsComponent {
 
   getSettlements() {
     this.service.getAllSettlements().subscribe((data) => {
-      console.log(data);
+      // console.log(data);
       this.settlements = data;
       this.calculateTotalCapacityUsed();
     });
@@ -47,7 +47,7 @@ export class SettlementsComponent {
   setSelectedSettlement(settlement: Settlements) {
     this.selectedSettlement = settlement;
 
-    console.log(this.selectedSettlement.settlement_id);
+    // console.log(this.selectedSettlement.settlement_id);
     sessionStorage.setItem("CurrentSettlement", JSON.stringify(this.selectedSettlement.settlement_id));
 
     // Redirect to another route after setting the selected settlement

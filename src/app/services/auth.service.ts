@@ -20,7 +20,7 @@ export class AuthService {
       tap((response) => {
         if (response) {
           // set out session storage
-          console.log(response)
+          // console.log(response)
           sessionStorage.setItem('currentUser', JSON.stringify(response))
           this.isLoggedIn.next(true)
         }
@@ -55,7 +55,7 @@ export class AuthService {
     var user = JSON.parse(sessionStorage.getItem("currentUser")!)
     
     if (user) {
-      console.log(user);
+      // console.log(user);
       return user.isAdmin
     } else {
       this.isLoggedIn.next(false)

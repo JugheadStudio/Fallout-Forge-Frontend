@@ -25,7 +25,7 @@ export class AdminComponent {
 
   getCC() {
     this.service.getAllCC().subscribe((data) => {
-      console.log(data);
+      // console.log(data);
       this.cc = data;
     });
   }
