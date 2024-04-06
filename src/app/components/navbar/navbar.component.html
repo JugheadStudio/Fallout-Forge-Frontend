@@ -15,26 +15,22 @@
 
                 @if (isLoggedIn) {
                   <li class="nav-item">
-                    <a class="nav-link active" routerLink="/" routerLinkActive="active"
-                        ariaCurrentWhenActive="page">Home</a>
+                    <a class="nav-link active" [class.active]="activeRoute === '/'" routerLink="/" (click)="setActiveRoute('/')">Home</a>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" routerLink="/settlements" routerLinkActive="active"
-                        ariaCurrentWhenActive="page">Settlements</a>
+                    <a class="nav-link" [class.active]="activeRoute === '/settlements'" routerLink="/settlements" (click)="setActiveRoute('/settlements')">Settlements</a>
                   </li>
 
                   @if(isAdmin) {
                     <li class="nav-item">
-                      <a class="nav-link" routerLink="/admin" routerLinkActive="active"
-                          ariaCurrentWhenActive="page">Admin</a>
+                      <a class="nav-link" [class.active]="activeRoute === '/admin'" routerLink="/admin"(click)="setActiveRoute('/admin')">Admin</a>
                     </li>
                   }
 
                 } @else {
                   <li class="nav-item">
-                    <a class="nav-link active" routerLink="/" routerLinkActive="active"
-                        ariaCurrentWhenActive="page">Home</a>
+                    <a class="nav-link active" routerLink="/">Home</a>
                   </li>
 
                 }
