@@ -1,28 +1,35 @@
+<app-navbar></app-navbar>
+
 <div class="container">
   <div class="row justify-content-around pt-200">
 
     <div class="col-3 text-center">
-      <img src="../../../assets/logo.png" alt="" class="login-logo">
+      <!-- <img src="../../../assets/logo.png" alt="" class="login-logo"> -->
   
       <h1 class="login_text heading text-primary mt-60 mb-60">REGISTER</h1>
   
       <div class="text-start">
-        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
           <label for="registerName" class="form-label">NAME</label>
-          <input type="text" class="form-control" id="registerName" placeholder="Han Solo">
-  
+          <input type="text" class="form-control" id="registerName" placeholder="Han" formControlName="name">
+        
+          <label for="registerSurname" class="form-label">SURNAME</label>
+          <input type="text" class="form-control" id="registerSurname" placeholder="Solo" formControlName="surname">
+        
           <label for="registerUsername" class="form-label mt-20">USERNAME</label>
-          <input type="text" class="form-control" id="registerUsername" placeholder="HanSolo420">
-  
+          <input type="text" class="form-control" id="registerUsername" placeholder="HanSolo420" formControlName="username">
+        
           <label for="registerEmail" class="form-label mt-20">EMAIL</label>
-          <input type="email" class="form-control" id="registerEmail" placeholder="HanSolo@gmail.com">
-    
+          <input type="email" class="form-control" id="registerEmail" placeholder="HanSolo@gmail.com" formControlName="email">
+        
           <label for="registerPassword" class="form-label mt-20">PASSWORD</label>
-          <input type="password" class="form-control" id="registerPassword" placeholder="enter password">
+          <input type="password" class="form-control" id="registerPassword" placeholder="enter password" formControlName="password">
+        
+          <button type="submit" class="btn btn-primary login-btn mt-30">REGISTER</button>
+          <button type="button" class="btn btn-secondary login-btn mt-20" routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">ALREADY A USER</button>
         </form>
+        
   
-        <button type="button" class="btn btn-primary login-btn mt-30">REGISTER</button>
-        <button type="button" class="btn btn-secondary login-btn mt-20">ALREADY A USER</button>
       </div>
   
     </div>

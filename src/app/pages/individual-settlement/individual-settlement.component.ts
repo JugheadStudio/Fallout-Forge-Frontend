@@ -5,11 +5,12 @@ import { Settlements } from "../../models/settlements.model";
 import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { ConstructedConstructions } from '../../models/constructed-constructions.model';
 import { Construction } from '../../models/construction.model';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: "app-individual-settlement",
   standalone: true,
-  imports: [NavbarComponent, NgFor, NgIf, CommonModule],
+  imports: [NavbarComponent, NgFor, NgIf, CommonModule, RouterLink],
   templateUrl: "./individual-settlement.component.html",
   styleUrl: "./individual-settlement.component.css",
 })
@@ -37,14 +38,14 @@ export class IndividualSettlementComponent {
 
   getSettlements() {
     this.service.getAllSettlements().subscribe((data) => {
-      console.log(data);
+      // console.log(data);
       this.settlements = data;
     });
   }
 
   getConstructions() {
     this.service.getAllConstructions().subscribe((data2) => {
-      console.log(data2);
+      // console.log(data2);
       this.constructions = data2;
     });
   }

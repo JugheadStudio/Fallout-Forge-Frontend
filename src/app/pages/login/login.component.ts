@@ -1,33 +1,45 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
+import { Router, RouterLink } from '@angular/router';
+import { NavbarComponent } from "../../components/navbar/navbar.component";
 
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-login',
+    standalone: true,
+    templateUrl: './login.component.html',
+    styleUrl: './login.component.css',
+    imports: [
+      ReactiveFormsModule, 
+      NavbarComponent,
+      RouterLink
+    ]
 })
 
-export class LoginComponent implements OnInit {
-  myForm!: FormGroup;
+export class LoginComponent {
   
-  constructor(private fb: FormBuilder) {}
-  
-  ngOnInit(): void {
-    this.myForm = this.fb.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required],
-    });
-  }
+  constructor(private service: AuthService, private router: Router) {}
 
-  onSubmit(): void {
-    // Handle form submission logic here
-    if (this.myForm.valid) {
-      console.log('Form submitted:', this.myForm.value);
-      // Perform further actions like sending data to a server
+  login = new FormGroup({
+    email: new FormControl('', Validators.required),
+    username: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
+  })
+
+  onSubmit() {
+    // Validation
+    if ((this.login.value.email != "" || this.login.value.username !="") && this.login.value.password != "" ) {
+      this.service.loginUser(this.login.value.email!, this.login.value.password!)
+      .subscribe((success) => {
+        // login successful, navigate to landing page
+        if (success) {
+          this.router.navigateByUrl("/")
+        } else {
+          console.log("Add validation");
+          
+        }
+      })
     }
   }
 

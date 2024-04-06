@@ -18,8 +18,9 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
         NavbarComponent
     ]
 })
+
 export class AppComponent {
-  title = 'fallout-surge';
+  title = 'fallout-forge';
 
   constructor(private modalService: NgbModal) {
   }

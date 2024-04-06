@@ -13,40 +13,45 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav">
 
-                <li class="nav-item">
-                    <a class="nav-link active" routerLink="/" routerLinkActive="active"
-                        ariaCurrentWhenActive="page">Home</a>
-                </li>
+                @if (isLoggedIn) {
+                  <li class="nav-item">
+                    <a class="nav-link active" [class.active]="activeRoute === '/'" routerLink="/" (click)="setActiveRoute('/')">Home</a>
+                  </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/settlements" routerLinkActive="active"
-                        ariaCurrentWhenActive="page">Settlements</a>
-                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [class.active]="activeRoute === '/settlements'" routerLink="/settlements" (click)="setActiveRoute('/settlements')">Settlements</a>
+                  </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/login" routerLinkActive="active"
-                        ariaCurrentWhenActive="page">Login</a>
-                </li>
+                  @if(isAdmin) {
+                    <li class="nav-item">
+                      <a class="nav-link" [class.active]="activeRoute === '/admin'" routerLink="/admin"(click)="setActiveRoute('/admin')">Admin</a>
+                    </li>
+                  }
 
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/register" routerLinkActive="active"
-                        ariaCurrentWhenActive="page">Register</a>
-                </li>
+                } @else {
+                  <li class="nav-item">
+                    <a class="nav-link active" routerLink="/">Home</a>
+                  </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin" routerLinkActive="active"
-                        ariaCurrentWhenActive="page">Admin</a>
-                </li>
+                }
 
             </ul>
         </div>
 
         <div class="user_div">
-            <img src="../../assets/user.png" alt="" class="user_img">
-            <div class="user_info">
-                <h4 class="user_name">Ruan</h4>
-                <h5 class="user_username">Username</h5>
+
+          @if (isLoggedIn) {
+            <div class=" d-flex user_info">
+              <h4 class="user_name m-0">{{ currentUser?.name + " " + currentUser?.surname }}</h4>
+              <h4 class="nav-logout m-0" (click)="callLogout()">Logout</h4>
             </div>
+          } @else {
+
+            <div class=" d-flex user_info">
+              <h4 class="nav-logout m-0" routerLink="/login" routerLinkActive="active"
+              ariaCurrentWhenActive="page">Login</h4>
+            </div>
+          }
         </div>
 
     </div>
