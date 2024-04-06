@@ -23,8 +23,9 @@ export class SettlementsComponent {
 
   getSettlements() {
     this.service.getAllSettlements().subscribe((data) => {
-      // console.log(data);
-      this.settlements = data;
+      console.log(data);
+      // Sort settlements alphabetically by name
+      this.settlements = data.sort((a, b) => a.name.localeCompare(b.name));
       this.calculateTotalCapacityUsed();
     });
   }
@@ -42,15 +43,31 @@ export class SettlementsComponent {
   }
 
   // Set active settlements
-  selectedSettlement?: Settlements;
+  selectedSettlement?: number;
 
-  setSelectedSettlement(settlement: Settlements) {
-    this.selectedSettlement = settlement;
+  setSelectedSettlement(settlementid: number) {
+    // this.selectedSettlement = settlement;
+    this.selectedSettlement = settlementid;
 
-    // console.log(this.selectedSettlement.settlement_id);
-    sessionStorage.setItem("CurrentSettlement", JSON.stringify(this.selectedSettlement.settlement_id));
+    console.log(this.selectedSettlement);
+    sessionStorage.setItem("CurrentSettlement", JSON.stringify(settlementid));
 
     // Redirect to another route after setting the selected settlement
     this.router.navigate(["/settlement1"]);
   }
+
+  // selectedSettlement?: Settlements;
+
+  // setSelectedSettlement(settlement: Settlements) {
+  //   this.selectedSettlement = settlement;
+
+  //   console.log(this.selectedSettlement.settlement_id);
+  //   sessionStorage.setItem(
+  //     "CurrentSettlement",
+  //     JSON.stringify(this.selectedSettlement.settlement_id)
+  //   );
+
+  //   // Redirect to another route after setting the selected settlement
+  //   this.router.navigate(["/settlement1"]);
+  // }
 }
