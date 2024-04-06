@@ -1,0 +1,14 @@
+.progress-bar {
+    background-color: var(--fallout-dark-grey);
+    height: 7px;
+    width: 50%;
+    margin: 0 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.level-progress {
+    background-color: var(--fallout-primary);
+    height: 7px;
+    width: 50%;
+}

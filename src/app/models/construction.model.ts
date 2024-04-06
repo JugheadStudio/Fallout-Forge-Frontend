@@ -7,4 +7,10 @@ export interface Construction {
   image: string;
   category: string;
   items?: Items[];
+  yields: string;
+  cost: number;
+  amountOwnedSettlement1: number;
+  amountOwnedSettlement2: number;
+  amountOwnedSettlement3: number;
+  [key: string]: any;
 }
