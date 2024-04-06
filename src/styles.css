@@ -2,7 +2,7 @@
 :root {
   --fallout-primary: #FFF281;
   --fallout-secondary: #81E1FF;
-  --fallout-tertiary: #703A3A;
+  --fallout-tertiary: #c04545;
   --fallout-white: #ffffff;
 
   --fallout-success: #86D24B;
@@ -19,8 +19,9 @@
   --fallout-border-secondary: #1F1F1F;
   --fallout-border-tertiary: #848484;
 
-  --fallout-primary-hover: #b5ac58;
-
+  --fallout-primary-hover: #539fab;
+  --fallout-secondary-hover: #5aaac2;
+  --fallout-tertiary-hover: #432121;
 
   --fallout-text-xxl: 1.728rem;
   --fallout-text-xl: 1.44rem;
@@ -134,11 +135,14 @@
 }
 
 .secondary-btn {
-  background-color: var(--fallout-secondary);
+  background-color: transparent;
+  color: var(--fallout-primary);
+  border: 1px solid var(--fallout-primary);
 }
 
-.tertiary-btn {
-  background-color: var(--fallout-tertiary);
+.secondary-btn:hover {
+  background-color: var(--fallout-primary);
+  color: var(--fallout-dark-grey3);
 }
 
 /* ======================== General ======================== */
@@ -432,6 +436,10 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border-bottom: 1px solid var(--fallout-dark-grey) !important;
 }
 
+.border-bottom-constructions:not(:last-child) {
+  border-bottom: 1px solid var(--fallout-dark-grey) !important;
+}
+
 .border-bottom-inventory:not(:nth-last-child(-n+2)) {
   border-bottom: 1px solid var(--fallout-dark-grey) !important;
 }
@@ -447,6 +455,10 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
 .inventory-row-height {
   height: 50px;
+}
+
+.inventory-row-head-height {
+  height: 40px;
 }
 
 /* ---------------------- Modals ---------------------- */

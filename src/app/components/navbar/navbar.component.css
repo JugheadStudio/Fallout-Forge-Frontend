@@ -28,10 +28,9 @@
     line-height: 53px;
     flex-shrink: 0;
     border-radius: 100px;
-    border: 2px solid #1F1F1F;
+    border: 2px solid var(--fallout-primary);
     display: flex;
     align-items: center;
-    padding: 10px 25px;
 }
 
 .user_img {
@@ -48,14 +47,14 @@
 }
 
 .user_name {
-    color: #FFF;
+    color: white;
     font-family: Montserrat;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
-    margin-right: 20px !important;
+    padding: 10px 20px;
 }
 
 .user_username {
@@ -70,12 +69,35 @@
 
 .nav-logout {
   font-size: var(--fallout-text-sm);
-  color: var(--fallout-dark-grey2);
+  color: var(--fallout-primary);
   margin: 0;
   text-decoration: none;
+  border-left: 2px solid var(--fallout-primary);
+  padding: 10px 25px;
+  transition: 0.3s ease;
 }
 
 .nav-logout:hover {
   color: var(--fallout-primary);
   cursor: pointer;
+  background-color: var(--fallout-primary);
+  border-radius: 0 20px 20px 0;
+  color: var(--fallout-dark-grey3);
+}
+
+.nav-login {
+  font-size: var(--fallout-text-sm) !important;
+  color: var(--fallout-primary);
+  margin: 0;
+  text-decoration: none;
+  padding: 10px 25px;
+  transition: 0.3s ease;
+}
+
+.nav-login:hover {
+  color: var(--fallout-primary);
+  cursor: pointer;
+  background-color: var(--fallout-primary);
+  border-radius: 20px;
+  color: var(--fallout-dark-grey3);
 }
