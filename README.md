@@ -6,6 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 [Fallout-Forge-Backend](https://github.com/JugheadStudio/Fallout-Forge-Backend)
 
+[Database](https://github.com/JugheadStudio/Fallout-Forge-Backend/blob/main/ff_backup.sql)
+
 <!-- HEADER SECTION -->
 <h5 align="center" style="padding:0;margin:0;">Dieter Roelofse</h5>
 <h5 align="center" style="padding:0;margin:0;">221122</h5>
