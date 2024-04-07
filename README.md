@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 <!-- HEADER SECTION -->
 <h5 align="center" style="padding:0;margin:0;">Dieter Roelofse</h5>
 <h5 align="center" style="padding:0;margin:0;">221122</h5>
-<h5 align="center" style="padding:0;margin:0;">Ruan Roelofse</h5>
+<h5 align="center" style="padding:0;margin:0;">Ruan Jordaan</h5>
 <h5 align="center" style="padding:0;margin:0;">150139</h5>
 <h6 align="center">Interactive Development 300</h6>
 </br>
@@ -43,19 +43,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   - [Implementation Process](#implementation-process)
     - [Highlights](#highlights)
     - [Challenges](#challenges)
-  - [Reviews and Testing](#peer-reviews)
-    - [Feedback from Reviews](#feedback-from-reviews)
-    - [Unit Tests](#unit-tests)
   - [Future Implementation](#peer-reviews)
 - [Final Outcome](#final-outcome)
-  - [Mockups](#mockups)
   - [Video Demonstration](#video-demonstration)
-- [Conclusion](#conclusion)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
 - [License](#license)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
 <!--PROJECT DESCRIPTION-->
 
@@ -152,11 +143,22 @@ Admin can adjust the value of items.
 
 ### ER-Diagram
 
+![Database ER diagram](https://github.com/JugheadStudio/Fallout-Forge-Frontend/assets/113913471/5ec7dc8a-f338-499e-9ea3-8d4563b76a94)
 
 ### UI Designs
 
+![Login](https://github.com/JugheadStudio/Fallout-Forge-Frontend/assets/113913471/9f3f08b0-29b8-446b-a84b-2edf9b6d9227)
+
+![Settlements](https://github.com/JugheadStudio/Fallout-Forge-Frontend/assets/113913471/05da59f4-3f08-419c-a30b-e193a8770517)
+
+![Settlement Dashboard](https://github.com/JugheadStudio/Fallout-Forge-Frontend/assets/113913471/746bb07f-b230-4684-9837-cbcaf02e2809)
+
 
 ### User-flows
+
+![DV 301 Planning week 2_Page_5](https://github.com/JugheadStudio/Fallout-Forge-Frontend/assets/113913471/ad35f8d9-d287-48e8-95f3-9099b8f3f0be)
+
+![DV 301 Planning week 2_Page_4](https://github.com/JugheadStudio/Fallout-Forge-Frontend/assets/113913471/6ed1b41c-8a6b-49e5-b775-d780f9fd9227)
 
 
 
