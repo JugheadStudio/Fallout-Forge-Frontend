@@ -200,7 +200,7 @@ Admin can adjust the value of items.
 
 To see a run through of the application, click below:
 
-[View Demonstration]()
+[View Demonstration](https://drive.google.com/drive/folders/1Zo9QAXI-6R0UXaZAqg8gofJj_h5Y_J0f?usp=sharing)
 
 <!-- AUTHORS -->
 
